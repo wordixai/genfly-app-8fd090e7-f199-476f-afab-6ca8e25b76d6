@@ -6,76 +6,73 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 59 130% 50%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Slate color scale */
+    --slate-1: 0 0% 99%;
+    --slate-2: 0 0% 97.3%;
+    --slate-3: 0 0% 95.1%;
+    --slate-4: 0 0% 93%;
+    --slate-5: 0 0% 90.9%;
+    --slate-6: 0 0% 88.7%;
+    --slate-7: 0 0% 85.8%;
+    --slate-8: 0 0% 78%;
+    --slate-9: 0 0% 51.8%;
+    --slate-10: 0 0% 43.9%;
+    --slate-11: 0 0% 37.4%;
+    --slate-12: 0 0% 8.5%;
+    
+    /* Green color scale */
+    --green-3: 120 60% 95%;
+    --green-9: 120 60% 50%;
+    --green-10: 120 60% 45%;
+    
+    /* Red color scale */
+    --red-10: 0 60% 50%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
+    --primary: 59 130% 50%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -94,8 +91,104 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .text-slate-1 { color: hsl(var(--slate-1)); }
+  .text-slate-2 { color: hsl(var(--slate-2)); }
+  .text-slate-3 { color: hsl(var(--slate-3)); }
+  .text-slate-4 { color: hsl(var(--slate-4)); }
+  .text-slate-5 { color: hsl(var(--slate-5)); }
+  .text-slate-6 { color: hsl(var(--slate-6)); }
+  .text-slate-7 { color: hsl(var(--slate-7)); }
+  .text-slate-8 { color: hsl(var(--slate-8)); }
+  .text-slate-9 { color: hsl(var(--slate-9)); }
+  .text-slate-10 { color: hsl(var(--slate-10)); }
+  .text-slate-11 { color: hsl(var(--slate-11)); }
+  .text-slate-12 { color: hsl(var(--slate-12)); }
+  
+  .bg-slate-1 { background-color: hsl(var(--slate-1)); }
+  .bg-slate-2 { background-color: hsl(var(--slate-2)); }
+  .bg-slate-3 { background-color: hsl(var(--slate-3)); }
+  .bg-slate-4 { background-color: hsl(var(--slate-4)); }
+  .bg-slate-5 { background-color: hsl(var(--slate-5)); }
+  .bg-slate-6 { background-color: hsl(var(--slate-6)); }
+  .bg-slate-7 { background-color: hsl(var(--slate-7)); }
+  .bg-slate-8 { background-color: hsl(var(--slate-8)); }
+  .bg-slate-9 { background-color: hsl(var(--slate-9)); }
+  .bg-slate-10 { background-color: hsl(var(--slate-10)); }
+  .bg-slate-11 { background-color: hsl(var(--slate-11)); }
+  .bg-slate-12 { background-color: hsl(var(--slate-12)); }
+  
+  .border-slate-6 { border-color: hsl(var(--slate-6)); }
+  .border-slate-7 { border-color: hsl(var(--slate-7)); }
+  
+  .hover\:border-slate-7:hover { border-color: hsl(var(--slate-7)); }
+  .hover\:text-slate-12:hover { color: hsl(var(--slate-12)); }
+  .hover\:shadow-slate-6:hover { box-shadow: 0 10px 15px -3px hsl(var(--slate-6) / 0.1), 0 4px 6px -2px hsl(var(--slate-6) / 0.05); }
+  
+  .text-green-3 { color: hsl(var(--green-3)); }
+  .text-green-9 { color: hsl(var(--green-9)); }
+  .text-green-10 { color: hsl(var(--green-10)); }
+  .bg-green-3 { background-color: hsl(var(--green-3)); }
+  
+  .text-red-10 { color: hsl(var(--red-10)); }
+  
+  .shadow-inner { box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05); }
+  .shadow-slate-2 { box-shadow: 0 10px 15px -3px hsl(var(--slate-2) / 0.1), 0 4px 6px -2px hsl(var(--slate-2) / 0.05); }
+}
+
+@keyframes float0 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+@keyframes float1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+@keyframes float2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+@keyframes float3 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+@keyframes float4 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-14px); } }
+@keyframes float5 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-9px); } }
+@keyframes float6 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-11px); } }
+@keyframes float7 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
+@keyframes float8 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-13px); } }
+@keyframes float9 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+@keyframes float10 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+@keyframes float11 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+@keyframes float12 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+@keyframes float13 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+@keyframes float14 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+@keyframes float15 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-14px); } }
+@keyframes float16 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-9px); } }
+@keyframes float17 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-11px); } }
+@keyframes float18 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
+@keyframes float19 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-13px); } }
+@keyframes float20 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+@keyframes float21 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+@keyframes float22 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+@keyframes float23 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+@keyframes float24 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+
+.animate-float-0 { animation: float0 4s ease-in-out infinite 0ms; }
+.animate-float-1 { animation: float1 4s ease-in-out infinite 150ms; }
+.animate-float-2 { animation: float2 4s ease-in-out infinite 300ms; }
+.animate-float-3 { animation: float3 4s ease-in-out infinite 450ms; }
+.animate-float-4 { animation: float4 4s ease-in-out infinite 600ms; }
+.animate-float-5 { animation: float5 4s ease-in-out infinite 750ms; }
+.animate-float-6 { animation: float6 4s ease-in-out infinite 900ms; }
+.animate-float-7 { animation: float7 4s ease-in-out infinite 1050ms; }
+.animate-float-8 { animation: float8 4s ease-in-out infinite 1200ms; }
+.animate-float-9 { animation: float9 4s ease-in-out infinite 1350ms; }
+.animate-float-10 { animation: float10 4s ease-in-out infinite 1500ms; }
+.animate-float-11 { animation: float11 4s ease-in-out infinite 1650ms; }
+.animate-float-12 { animation: float12 4s ease-in-out infinite 1800ms; }
+.animate-float-13 { animation: float13 4s ease-in-out infinite 1950ms; }
+.animate-float-14 { animation: float14 4s ease-in-out infinite 2100ms; }
+.animate-float-15 { animation: float15 4s ease-in-out infinite 2250ms; }
+.animate-float-16 { animation: float16 4s ease-in-out infinite 2400ms; }
+.animate-float-17 { animation: float17 4s ease-in-out infinite 2550ms; }
+.animate-float-18 { animation: float18 4s ease-in-out infinite 2700ms; }
+.animate-float-19 { animation: float19 4s ease-in-out infinite 2850ms; }
+.animate-float-20 { animation: float20 4s ease-in-out infinite 3000ms; }
+.animate-float-21 { animation: float21 4s ease-in-out infinite 3150ms; }
+.animate-float-22 { animation: float22 4s ease-in-out infinite 3300ms; }
+.animate-float-23 { animation: float23 4s ease-in-out infinite 3450ms; }
+.animate-float-24 { animation: float24 4s ease-in-out infinite 3600ms; }
